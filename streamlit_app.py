@@ -1,5 +1,6 @@
+pip install streamlit pandas numpy matplotlib seaborn plotly
+
 import streamlit as st
-import time
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
