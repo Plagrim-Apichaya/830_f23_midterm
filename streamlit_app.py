@@ -1,15 +1,10 @@
 import streamlit as st
 import time
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
-col1, col2, col3 = st.columns([1, 2, 1])
-
-col1.markdown(" # Welcome to my app! ")
-col1.markdown(" # Here is some info on the app. ")
-col2.markdown(" Thailand Food Price (2014 - 2019) ")
-
-#upload_photo = col2.file_uploader(" Upload a photo", on_change = "chage_photo_state")
-#input_photo = col2.camera_input(" Take a photo to record your log in today")
+st.write(" # Analysis of Thai agriculture price and the driven factor behind the price dynamic.")
 
 url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/thailand-food-median-prices-2.csv"
 th_food = pd.read_csv(url)
