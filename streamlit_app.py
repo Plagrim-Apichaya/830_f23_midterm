@@ -1,3 +1,4 @@
+pip install streamlit
 import streamlit as st
 
 st.title("this is the app title")
