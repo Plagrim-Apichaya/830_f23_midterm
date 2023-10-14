@@ -1,14 +1,15 @@
-import streamlit as st
 import pandas as pd
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import seaborn as sns
+import streamlit as st
+import altair as alt
+from altair import datum
+import math
 import numpy as np
 
-# Set the title of the Streamlit app
-st.title("My Streamlit App")
+option = st.selectbox("1","2","3")
 
-# Create a header
-st.header("This is a Streamlit App with a Heading")
-#st.write(" # Analysis of Thai agriculture price and the driven factor behind the price dynamic.")
+st.write('data selected:', option)
 
 url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/thailand-food-median-prices-2.csv"
 th_food = pd.read_csv(url)
