@@ -1,7 +1,7 @@
 import streamlit as st
 
-st.title("this is the app title")
-st.header("this is the markdown")
+st.title("Analysis of Thai agriculture price and the driven factor behind the price dynamic.")
+st.header("Thai top agriculture: Rice, Cassava, and ")
 st.markdown("this is the header")
 st.subheader("this is the subheader")
 st.caption("this is the caption")
