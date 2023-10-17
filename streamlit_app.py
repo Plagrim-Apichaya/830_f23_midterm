@@ -11,4 +11,4 @@ st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
 url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/thailand-food-median-prices-2.csv"
 df = pd.read_csv(url, index_col=0)
-df.head()
+st.dataframe(df)
