@@ -22,6 +22,10 @@ if page == "Home":
     df = pd.read_csv(url, index_col=0)
     st.dataframe(df)
     
+    cassava = pd.DataFrame(df.iloc[:,:3])
+    corn = pd.DataFrame(df.iloc[:,[0,1,3]])
+    rice = pd.DataFrame(df.iloc[:,[0,1,4]])
+
 # "Cassava, Corn, Rice"
     def choose_type(agri_type, year = 2018):
         color = ["#3DB2FF", "#FF2442", "#FFB830"]
