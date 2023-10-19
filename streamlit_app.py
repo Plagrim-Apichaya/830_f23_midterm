@@ -5,14 +5,15 @@ st.title("Analysis of Thai agriculture price and the driven factor behind the pr
 st.header("Thai top agriculture: Rice, Cassava, and Corn")
 #st.markdown("this is the header")
 
-a = st.button("Home")
-b = st.button("Rice")
+st.button("Home")
+st.button("Rice")
 
-
+'''
 if a == True:
     st.write("This is home page")
 elif b == True:
     st.write("Rice info")
+'''
 
 st.image(
             "https://c.tadst.com/gfx/600x337/international-year-plant-health.jpg?1",
