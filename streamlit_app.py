@@ -7,7 +7,7 @@ st.header("Thai top agriculture: Rice, Cassava, and Corn")
 
 st.image(
             "https://c.tadst.com/gfx/600x337/international-year-plant-health.jpg?1",
-            width=400, # Manually Adjust the width of the image as per requirement
+            width=400
         )
 
 st.subheader("This app is to walk you through the analyze of the historical agriculture price data recorded monthly from January 2001 to March 2020")
@@ -21,6 +21,7 @@ st.write("Thailand is a dynamic developing country which is known for its signif
 
 
 
-url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/thailand-food-median-prices-2.csv"
+#url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/thailand-food-median-prices-2.csv"
+url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/Thailand_food_price.csv"
 df = pd.read_csv(url, index_col=0)
 st.dataframe(df)
