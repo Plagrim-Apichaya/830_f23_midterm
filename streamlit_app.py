@@ -18,8 +18,6 @@ if page == "Home":
 
     veg_type = st.multiselect("Agriculture product type", ["Rice", "Corn", "Cassava"])
     
-
-    #url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/thailand-food-median-prices-2.csv"
     url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/TH_agri_price.csv"
     df = pd.read_csv(url, index_col=0)
     st.dataframe(df)
