@@ -33,23 +33,16 @@ if page == "Home":
             agri = agri_type[i]
             agri_name = agri.columns[-1][:-6]
             select_year_agri = agri[agri["year"] == year]
-            print(agri_name)
-            print(select_year_agri)
             
             x = select_year_agri["date"]
             y = select_year_agri.iloc[:,-1]
-            
-            print(color[i])
-            plt.figure(figsize=(14, 7))
 
+            plt.figure(figsize=(14, 7))
             plt.scatter(x, y, s = 10, c = color[i])
             plt.plot(x, y, c = color[i], label = agri_name)
-
-            #plt.title("Band 1: RED (red) and Band 2: NIR (blue) Reflectance from 2020 - now", fontsize = 18)
             plt.xlabel('Dates', fontsize = 15)
             plt.ylabel('Price (Thai Baht)', fontsize = 15)
             plt.legend(fontsize = 12, loc = 1)
-
             plt.xticks(rotation = 90)
             st.pyplot()
             
