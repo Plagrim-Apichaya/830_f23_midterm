@@ -5,7 +5,7 @@ st.title("Analysis of Thai agriculture price and the driven factor behind the pr
 st.header("Thai top agriculture: Rice, Cassava, and Corn")
 #st.markdown("this is the header")
 
-page = st.sidebar.radio("Menu",["Home","Rice"])
+page = st.sidebar.radio("Menu",["Home","Rice","Corn","Cassava","Thailand"])
 if page == "Home":
 
     st.image(
