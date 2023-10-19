@@ -16,9 +16,37 @@ if page == "Home":
     st.subheader("This app is to walk you through the analyze of the historical agriculture price data recorded monthly from January 2001 to March 2020")
     st.write("Thailand is a dynamic developing country which is known for its significant contributions to global agriculture exporting. It is a major exporter of agricultural products, with a reputation for delivering their culture along with them  like rice, fruits, cassava, and fish. These agricultural exports not only deliver and serve the nation's economy but also serve as Thai culture and traditions. Additionally, they fulfill the dietary needs of the Thai population. However, the increasing prices of these fundamentals have raised concerns in understanding the intricate dynamics governing their fluctuations.")  
 
-    veg_type = st.multiselect("Agriculture product type", ["Rice", "Corn", "Cassava"])
-    
+    agri_type = st.multiselect("Agriculture product type", ["Rice", "Corn", "Cassava"])
+
     url = "https://raw.githubusercontent.com/Plagrim-Apichaya/830_f23_midterm/main/TH_agri_price.csv"
     df = pd.read_csv(url, index_col=0)
     st.dataframe(df)
+    
+# "Cassava, Corn, Rice"
+    def choose_type(agri_type, year = 2018):
+        color = ["#3DB2FF", "#FF2442", "#FFB830"]
+        for i in range(len(agri_type)):
+            agri = agri_type[i]
+            agri_name = agri.columns[-1][:-6]
+            select_year_agri = agri[agri["year"] == year]
+            print(agri_name)
+            print(select_year_agri)
+            
+            x = select_year_agri["date"]
+            y = select_year_agri.iloc[:,-1]
+            
+            print(color[i])
+            plt.figure(figsize=(14, 7))
+
+            plt.scatter(x, y, s = 10, c = color[i])
+            plt.plot(x, y, c = color[i], label = agri_name)
+
+            #plt.title("Band 1: RED (red) and Band 2: NIR (blue) Reflectance from 2020 - now", fontsize = 18)
+            plt.xlabel('Dates', fontsize = 15)
+            plt.ylabel('Price (Thai Baht)', fontsize = 15)
+            plt.legend(fontsize = 12, loc = 1)
+
+            plt.xticks(rotation = 90)
+            st.pyplot()
+    choose_type([corn, cassava], 2016)
 
