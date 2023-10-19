@@ -7,14 +7,12 @@ st.header("Thai top agriculture: Rice, Cassava, and Corn")
 
 a = st.button("Home")
 b = st.button("Rice")
-c = st.button("Corn")
+
 
 if a == True:
     st.write("This is home page")
 elif b == True:
     st.write("Rice info")
-elif c == True:
-    st.write("Corn info")
 
 st.image(
             "https://c.tadst.com/gfx/600x337/international-year-plant-health.jpg?1",
