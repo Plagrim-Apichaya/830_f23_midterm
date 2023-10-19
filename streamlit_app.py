@@ -52,5 +52,6 @@ if page == "Home":
 
             plt.xticks(rotation = 90)
             st.pyplot()
+            
     choose_type([corn, cassava], 2016)
 
