@@ -33,7 +33,7 @@ if page == "Home":
             agri = agri_type[i]
             agri_name = agri.columns[-1][:-6]
             select_year_agri = agri[agri["year"] == year]
-            
+
             x = select_year_agri["date"]
             y = select_year_agri.iloc[:,-1]
 
@@ -47,4 +47,5 @@ if page == "Home":
             st.pyplot()
             
     choose_type([corn, cassava], 2016)
+    st.write("yeah")
 
