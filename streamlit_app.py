@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
 
 st.title("Analysis of Thai agriculture price and the driven factor behind the price dynamic.")
