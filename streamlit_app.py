@@ -437,5 +437,5 @@ elif page == "Climate":
 #### ---- THAILAND ---- ####
 elif page == "Thailand":
     st.image("https://www.marketinginasia.com/wp-content/uploads/2023/07/Why-Thailand-Could-Emerge-as-a-Leading-IT-Production-Powerhouse.jpg")
-    st.write("### Thailand is one of the South East Asia country located near the equation. It is the dream tourist destinations for many tourists because of the beaasutiful landscape that blending well with the culture")
+    st.write("### Thailand is one of the South East Asia country located near the equator. It is the dream tourist destinations for many tourists because of the beaasutiful landscape that blending well with the culture")
     
